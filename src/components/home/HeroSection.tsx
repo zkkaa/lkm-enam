@@ -38,7 +38,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="sticky top-0 min-h-[95vh] overflow-hidden flex items-center px-10 pt-28">
+    <section className="sticky top-0 min-h-[95vh] overflow-hidden flex items-center px-10">
       {/* ── Video Background ─────────────────────────────────── */}
       <div className="absolute inset-0">
         <video
@@ -86,7 +86,7 @@ export default function HeroSection() {
       </button>
 
       {/* ── Konten Teks ─────────────────────────────────────── */}
-      <div className="relative z-10 h-full flex flex-col justify-end px-10 md:px-16 pb-10">
+      <div className="relative z-10 w-full h-screen flex flex-col justify-end pb-20 px-10 md:px-16">
         <div className="flex flex-col max-w-3xl">
 
           <span
@@ -111,11 +111,10 @@ export default function HeroSection() {
           </h1>
 
           <span
-            ref={labelRef}
-            className=" font-semibold tracking-widest text-white/55 uppercase"
+            className="font-semibold tracking-widest text-white/55 uppercase mt-4"
           >
             &quot;Sebelas orang. Satu arah. Kami tidak datang untuk ikut-ikutan <br />
-            kami datang untuk meninggalkan jejak.&quot;
+              kami datang untuk meninggalkan jejak.&quot;
           </span>
 
         </div>
