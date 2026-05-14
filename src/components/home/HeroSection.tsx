@@ -42,7 +42,8 @@ export default function HeroSection() {
       {/* ── Video Background ─────────────────────────────────── */}
       <div className="absolute inset-0">
         <video
-          src="https://7sqr8euvtsm1cutd.public.blob.vercel-storage.com/team/bg-video.mp4"
+          ref={videoRef}
+          src="https://qdavqal220rmldtc.public.blob.vercel-storage.com/bg.mp4"
           autoPlay
           muted
           loop
