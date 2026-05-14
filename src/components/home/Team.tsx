@@ -4,45 +4,7 @@ import { useRef, useEffect } from "react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import TextHeading from "../ui/TextHeading";
 import Image from "next/image";
-
-export interface TeamMember {
-  id: number;
-  name: string;
-  nim: string;
-  role: string;
-  skills: string[];
-  image: string;
-}
-
-export const teamData: TeamMember[] = [
-  {
-    id: 1,
-    name: "Muhammad Azka Fakhri Fairuz",
-    nim: "257006111019",
-    // role: "Lead Project",
-    role: "",
-    skills: ["Designer", "Full Stack Developer"],
-    image: "", 
-  },
-    {
-    id: 2,
-    name: "Muhammad Azka Fakhri Fairuz",
-    nim: "257006111020",
-    // role: "Lead Developer",
-    role: "",
-    skills: ["Full Stack Developer", "UI/UX Designer"],
-    image: "",
-    },
-    {
-    id: 3,
-    name: "Muhammad Azka Fakhri Fairuz",
-    nim: "257006111021",
-    // role: "UI/UX Designer",
-    role: "",
-    skills: ["UI/UX Designer", "Frontend Developer"],
-    image: "",
-    },
-];
+import { teamData, type TeamMember } from "@/data/home";
 
 // ── Main Component ─────────────────────────────────────────────────────────────
 export default function Team() {
@@ -229,7 +191,7 @@ export function TeamCard({ member }: TeamCardProps) {
                 <div className="flex gap-2 items-center">
                     {/* NIM */}
                     <p className="text-gray-600 italic text-[9px] sm:text-[10px] md:text-xs lg:text-xs">
-                        {member.nim}
+                        {member.npm}
                     </p>
 
                     {member.role && (

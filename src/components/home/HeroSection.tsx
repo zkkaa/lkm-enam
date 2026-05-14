@@ -67,18 +67,18 @@ export default function HeroSection() {
           // Icon muted
           <>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-              <line x1="23" y1="9" x2="17" y2="15"/>
-              <line x1="17" y1="9" x2="23" y2="15"/>
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+              <line x1="23" y1="9" x2="17" y2="15" />
+              <line x1="17" y1="9" x2="23" y2="15" />
             </svg>
           </>
         ) : (
           // Icon unmuted
           <>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
-              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
             </svg>
           </>
         )}
@@ -86,7 +86,7 @@ export default function HeroSection() {
 
       {/* ── Konten Teks ─────────────────────────────────────── */}
       <div className="relative z-10 h-full flex flex-col justify-end px-10 md:px-16 pb-10">
-        <div className="flex flex-col gap-5 max-w-3xl">
+        <div className="flex flex-col max-w-3xl">
 
           <span
             ref={labelRef}
@@ -96,19 +96,26 @@ export default function HeroSection() {
           </span>
 
           <h1
-            className="font-serif text-5xl md:text-6xl font-bold leading-none tracking-tight text-white mb-4 select-none"
+            className="font-serif text-5xl md:text-6xl font-bold leading-none tracking-tight text-white select-none mt-5"
             style={{ fontFamily: "Georgia, serif" }}
           >
             <span className="block" style={{ overflow: "hidden", paddingBottom: "0.06em" }}>
               <span ref={headingRef}>
-                <SplitChars text="Orang-Orang" /> <br />
-                <SplitChars text="Kece Dibalik" />
+                <SplitChars text="VI" />
               </span>
               <span className="ml-4">
-                <SplitChars text="VI-sion" className="text-indigo-300 italic" />
+                <SplitChars text="-sion" className="text-indigo-300 italic" />
               </span>
             </span>
           </h1>
+
+          <span
+            ref={labelRef}
+            className=" font-semibold tracking-widest text-white/55 uppercase"
+          >
+            &quot;Sebelas orang. Satu arah. Kami tidak datang untuk ikut-ikutan <br />
+            kami datang untuk meninggalkan jejak.&quot;
+          </span>
 
         </div>
       </div>
