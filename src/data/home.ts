@@ -44,7 +44,7 @@ export const teamData: TeamMember[] = [
     npm: "257006111022",
     role: "",
     skills: [],
-    image: "/members/fathir.jpg",
+    image: "/foto/fathir.JPG",
   },
   {
     id: 2,
@@ -52,7 +52,7 @@ export const teamData: TeamMember[] = [
     npm: "257006111044",
     role: "",
     skills: [],
-    image: "/members/farrel.jpg",
+    image: "/foto/farrel.JPG",
   },
   {
     id: 3,
@@ -60,7 +60,7 @@ export const teamData: TeamMember[] = [
     npm: "257006111035",
     role: "",
     skills: [],
-    image: "/members/tisya.jpg",
+    image: "/foto/tisya.JPG",
   },
   {
     id: 4,
@@ -68,7 +68,7 @@ export const teamData: TeamMember[] = [
     npm: "257006111110",
     role: "",
     skills: [],
-    image: "/members/nazwa.jpg",
+    image: "/foto/nazwa.JPG",
   },
   {
     id: 5,
@@ -76,7 +76,7 @@ export const teamData: TeamMember[] = [
     npm: "257006111011",
     role: "",
     skills: [],
-    image: "/members/lutfi.jpg",
+    image: "/foto/lutfi.JPG",
   },
   {
     id: 6,
@@ -84,7 +84,7 @@ export const teamData: TeamMember[] = [
     npm: "257006111074",
     role: "",
     skills: [],
-    image: "/members/gemmy.jpg",
+    image: "/foto/gemmy.JPG",
   },
   {
     id: 7,
@@ -92,7 +92,7 @@ export const teamData: TeamMember[] = [
     npm: "257006111131",
     role: "",
     skills: [],
-    image: "/members/raffi.jpg",
+    image: "/foto/raffi.JPG",
   },
   {
     id: 8,
@@ -100,7 +100,7 @@ export const teamData: TeamMember[] = [
     npm: "257006111111",
     role: "",
     skills: [],
-    image: "/members/alia.jpg",
+    image: "/foto/alia.JPG",
   },
   {
     id: 9,
@@ -108,7 +108,7 @@ export const teamData: TeamMember[] = [
     npm: "257006111130",
     role: "",
     skills: [],
-    image: "/members/hazmi.jpg",
+    image: "/foto/hazmi.JPG",
   },
   {
     id: 10,
@@ -116,15 +116,15 @@ export const teamData: TeamMember[] = [
     npm: "257006111019",
     role: "",
     skills: [],
-    image: "/members/azka.jpg",
+    image: "/foto/azka.JPG",
   },
   {
     id: 11,
     name: "Muhammad Fabian Syauqi Mazaya",
     npm: "257006111197",
-    role: "",
+    role: "Team Lead",
     skills: [],
-    image: "/members/fabian.jpg",
+    image: "/foto/fabian.JPG",
   },
 ];
 
