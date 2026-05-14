@@ -28,6 +28,67 @@ export const aboutWebData = {
   },
 };
 
+export interface MateriTeaser {
+  id: number;
+  /** Nomor pertemuan */
+  pertemuan: number;
+  /** Warna aksen card */
+  accent: "indigo" | "blue" | "emerald";
+  /** Topik-topik yang dibahas */
+  topics: string[];
+}
+ 
+export const materiTeaserData: MateriTeaser[] = [
+  {
+    id: 1,
+    pertemuan: 1,
+    accent: "indigo",
+    topics: ["Materi 1", "Materi 2"],
+  },
+  {
+    id: 2,
+    pertemuan: 2,
+    accent: "blue",
+    topics: ["Materi 1", "Materi 2"],
+  },
+  {
+    id: 3,
+    pertemuan: 3,
+    accent: "emerald",
+    topics: ["Materi 1", "Materi 2"],
+  },
+  {
+    id: 4,
+    pertemuan: 4,
+    accent: "indigo",
+    topics: ["Materi 1", "Materi 2"],
+  },
+  {
+    id: 5,
+    pertemuan: 5,
+    accent: "blue",
+    topics: ["Materi 1", "Materi 2"],
+  },
+  {
+    id: 6,
+    pertemuan: 6,
+    accent: "emerald",
+    topics: ["Materi 1", "Materi 2"],
+  },
+  {
+    id: 7,
+    pertemuan: 7,
+    accent: "indigo",
+    topics: ["Materi 1", "Materi 2"],
+  },
+  {
+    id: 8,
+    pertemuan: 8,
+    accent: "blue",
+    topics: ["Materi 1", "Materi 2"],
+  },
+];
+
 export interface TeamMember {
   id: number;
   name: string;

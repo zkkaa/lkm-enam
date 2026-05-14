@@ -8,6 +8,7 @@ import ScrollAnim from "@/components/common/ScrollAnim";
 import { Footer } from "@/components/ui/Footer";
 import GroupIntro from "@/components/home/GroupIntro";
 import AboutWeb from "@/components/home/AboutWeb";
+import TeaserMateri from "@/components/home/Teasermateri";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Navbar />
         <HeroSection />
         <AboutWeb />
+        <TeaserMateri />
         <Quotes />
         <GroupIntro />
         <Team />
