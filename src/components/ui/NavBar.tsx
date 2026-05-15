@@ -119,13 +119,13 @@ export default function Navbar() {
       style={{ borderColor: 'rgba(200,205,230,0.7)' }}
     >
       {/* Logo */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center">
         <Image src="/logo.png" alt="Sigma Logo" width={20} height={20} unoptimized/>
         <span
           className="text-xl font-black tracking-tight text-gray-900 select-none shrink-0"
           style={{ fontFamily: '"Georgia", serif', fontStyle: 'italic' }}
         >
-          Vi-sion
+          -sion
         </span>
       </div>
 
