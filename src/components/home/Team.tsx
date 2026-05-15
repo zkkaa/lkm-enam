@@ -68,7 +68,7 @@ export default function Team() {
                     ref={titleRef}
                     className="shrink-0 w-[85vw] sm:w-[60vw] md:w-[50vw] lg:w-[35vw] px-6 sm:px-10 md:px-16 lg:px-20 mr-4 sm:mr-8 md:mr-12 lg:mr-16 z-10"
                 >
-                    <TextHeading subtitle="Mentor & Anggota" title="Kelompok 6 ini" titleItalic={true} />
+                    <TextHeading subtitle="Mentor & Anggota" subtitleSize="sm" title="Kelompok 6" titleItalic={true} />
                     <p className="mt-4 sm:mt-5 lg:mt-6 text-gray-600 leading-relaxed text-xs sm:text-sm md:text-sm lg:text-base">
                         Kenalin nih, orang-orang hebat didalam kelompok 6 ini. Tak hanya mentor yang kece dan penyabar ini, tapi juga anggota-anggota yang sangat keren-keren.
                     </p>
