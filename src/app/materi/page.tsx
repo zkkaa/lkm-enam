@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import Navbar from "@/components/ui/NavBar";
-import { Footer } from "@/components/ui/Footer";
+import { FooterCopyright } from "@/components/ui/Footer";
 import { materiList, pertemuanList } from "@/lib/materi-data";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -361,7 +361,7 @@ export default function MateriPage() {
         </div>
       </div>
 
-      <Footer />
+      <FooterCopyright />
     </main>
   );
 }

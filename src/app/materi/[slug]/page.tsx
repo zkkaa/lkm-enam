@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import Navbar from "@/components/ui/NavBar";
-import { Footer } from "@/components/ui/Footer";
+import { FooterCopyright } from "@/components/ui/Footer";
 import BackButton from "@/components/ui/BackButton";
 import {
   getMateriBySlug,
@@ -376,7 +376,7 @@ export default function MateriDetailPage() {
         </div>
       </div>
 
-      <Footer />
+      <FooterCopyright />
     </main>
   );
 }
