@@ -242,42 +242,6 @@ export default function MateriDetailPage() {
         <div className="max-w-3xl mx-auto">
           {/* ── Header ──────────────────────────────────────────────── */}
           <div ref={headerRef}>
-            {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-xs text-gray-400 mb-6">
-              <Link href="/" className="hover:text-gray-600 transition-colors">
-                Beranda
-              </Link>
-              <span>/</span>
-              <Link
-                href="/materi"
-                className="hover:text-gray-600 transition-colors"
-              >
-                Materi
-              </Link>
-              <span>/</span>
-              <span className="text-gray-600 line-clamp-1">{materi.judul}</span>
-            </div>
-
-            {/* Badges */}
-            <div ref={metaRef} className="flex items-center gap-2 flex-wrap mb-4">
-              <span
-                className={`text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full ${pColor.bg} ${pColor.text}`}
-              >
-                Pertemuan {materi.pertemuan}
-              </span>
-              <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-gray-100 text-gray-500">
-                Materi {materi.urutan}
-              </span>
-              {materi.tag.map((t) => (
-                <span
-                  key={t}
-                  className="text-[10px] font-semibold tracking-wide px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-
             {/* Title */}
             <h1
               ref={titleRef}
