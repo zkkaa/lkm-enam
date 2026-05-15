@@ -61,7 +61,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     }, []);
 
     useEffect(() => {
-        const t = setTimeout(() => setTextPhase(1), 370);
+        const t = setTimeout(() => setTextPhase(1), 3700);
         return () => clearTimeout(t);
     }, []);
 
@@ -178,19 +178,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 className="pointer-events-none absolute right-0 top-0 h-full w-px origin-top opacity-0"
                 style={{ background: "linear-gradient(to bottom, transparent, #c7d2fe, transparent)" }}
             />
-
-            <div
-                ref={dotRowRef}
-                className="absolute top-7 left-1/2 -translate-x-1/2 flex items-center gap-2"
-            >
-                {[...Array(5)].map((_, i) => (
-                    <span
-                        key={i}
-                        className={`splash-dot rounded-full ${i === 2 ? "w-2 h-2 bg-indigo-400" : "w-1 h-1 bg-indigo-200"
-                            }`}
-                    />
-                ))}
-            </div>
 
             <div className="relative z-10 flex-1 flex items-center px-12 md:px-20 lg:px-28 gap-12 max-w-7xl mx-auto w-full">
 
