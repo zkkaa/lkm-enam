@@ -146,7 +146,7 @@ function FeaturedCard({ item }: { item: MateriTeaser }) {
 
                     {/* Title placeholder */}
                     <h3 className="text-3xl md:text-4xl font-black text-white leading-tight mb-4">
-                        Judul Materi<br />Pertemuan {item.pertemuan}
+                        Judul Materi
                     </h3>
 
                     {/* Topics */}
@@ -216,22 +216,19 @@ function SmallCard({ item }: { item: MateriTeaser }) {
                         Pertemuan {item.pertemuan}
                     </span>
                     <p className="text-sm font-bold text-white mt-1.5 leading-snug">
-                        Judul Materi {item.pertemuan}
+                        Judul Materi
                     </p>
                 </div>
-
-                <Link
-                    href="/materi"
-                    className={`
-            self-start mt-3
-            text-xs font-semibold
-            text-white/70 group-hover:text-white
-            transition-colors duration-300
-            flex items-center gap-1
-          `}
-                >
-                    Baca <span>→</span>
-                </Link>
+                {/* Topics */}
+                <div className="flex flex-col gap-2 mt-4">
+                    {item.topics.map((topic, i) => (
+                        <div key={i} className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-white/50 shrink-0" />
+                            <span className="text-white/70 text-sm">{topic}</span>
+                        </div>
+                    ))}
+                </div>
+                
             </div>
         </motion.div>
     );
