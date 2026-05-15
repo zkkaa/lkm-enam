@@ -20,12 +20,6 @@ export default function Home() {
       {!splashDone && (
         <SplashScreen onComplete={() => setSplashDone(true)} />
       )}
-
-      {/* 
-        Main content tetap di-mount agar ScrollTrigger & plugin GSAP
-        sudah siap saat splash selesai. Cukup sembunyikan secara visual
-        sampai splash selesai.
-      */}
       <main
         style={{
           opacity: splashDone ? 1 : 0,
@@ -41,7 +35,7 @@ export default function Home() {
           <Quotes />
           <GroupIntro />
           <Team />
-          <Footer />
+            <Footer />
         </ScrollAnim>
       </main>
     </>

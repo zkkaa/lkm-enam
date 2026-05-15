@@ -9,12 +9,10 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 // ── Data Gambar ────────────────────────────────────────────────────────────────
-// Tambah atau kurangi gambar di sini sesuai kebutuhan
 const groupImages = [
-  { id: 0, src: "/group/foto-1.jpg", alt: "Foto kelompok 1" },
-  { id: 1, src: "/group/foto-2.jpg", alt: "Foto kelompok 2" },
-  { id: 2, src: "/group/foto-3.jpg", alt: "Foto kelompok 3" },
-  // { id: 3, src: "/group/foto-4.jpg", alt: "Foto kelompok 4" }, // aktifkan jika ada
+  { id: 0, src: "/foto/lkm1.jpg", alt: "Foto kelompok 1" },
+  { id: 1, src: "/foto/lkm3.jpg", alt: "Foto kelompok 3" },
+  { id: 2, src: "/foto/lkm2.jpg", alt: "Foto kelompok 2" },
 ];
 
 // ── Data Kelompok ──────────────────────────────────────────────────────────────
@@ -24,9 +22,9 @@ const groupInfo = {
   description:
     "Kami adalah Kelompok 6 dari rangkaian Latihan Kepemimpinan Mahasiswa (LKM) Jurusan Informatika. Terbentuk dari berbagai latar belakang dan karakter yang berbeda, kami percaya bahwa keberagaman adalah kekuatan.",
   details: [
-    { label: "Angkatan", value: "2025" },
     { label: "Jurusan", value: "Informatika" },
-    { label: "Jumlah Anggota", value: "9 Orang" },
+    { label: "Angkatan", value: "2025" },
+    { label: "Jumlah Anggota", value: "11 Orang" },
   ],
 };
 

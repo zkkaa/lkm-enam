@@ -8,7 +8,6 @@ interface SplashScreenProps {
     onComplete: () => void;
 }
 
-// ── Helper: render teks per huruf dengan span ─────────────────────────────────
 function LetterSpan({ text, className = "" }: { text: string; className?: string }) {
     return (
         <span className={className} aria-label={text}>
@@ -42,7 +41,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         style?: React.CSSProperties;
     }> | null>(null);
     const [mounted, setMounted] = useState(false);
-    // Phase 0 = "Selamat datang di VI-sion", phase 1 = "Sebelas langkah. Satu visi."
     const [textPhase, setTextPhase] = useState(0);
 
     const containerRef = useRef<HTMLDivElement>(null);
@@ -52,31 +50,27 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     const lineRightRef = useRef<HTMLDivElement>(null);
     const dotRowRef = useRef<HTMLDivElement>(null);
 
-    // ── Load lottie-react secara dinamis ─────────────────────────────────────
     useEffect(() => {
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
         import("lottie-react").then((mod) => setLottieComp(() => mod.default));
-        fetch("/json/team.json")
+        fetch("/json/teamm.json")
             .then((r) => r.json())
             .then(setLottieData)
             .catch(console.error);
     }, []);
 
-    // ── Ganti text phase setelah 3.8 detik ───────────────────────────────────
     useEffect(() => {
-        const t = setTimeout(() => setTextPhase(1), 3800);
+        const t = setTimeout(() => setTextPhase(1), 370);
         return () => clearTimeout(t);
     }, []);
 
-    // ── GSAP entrance — elemen statis (bukan teks phase) ─────────────────────
     useEffect(() => {
         if (!mounted) return;
 
         const ctx = gsap.context(() => {
             const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-            // Garis vertikal
             tl.fromTo(
                 [lineLeftRef.current, lineRightRef.current],
                 { scaleY: 0, opacity: 0 },
@@ -84,7 +78,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 0
             );
 
-            // Angka "VI" besar di background
             tl.fromTo(
                 bgNumRef.current,
                 { x: 60, opacity: 0 },
@@ -92,7 +85,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 0.1
             );
 
-            // Dot row
             const dots = dotRowRef.current?.querySelectorAll(".splash-dot");
             if (dots && dots.length) {
                 tl.fromTo(
@@ -103,7 +95,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 );
             }
 
-            // Drift halus pada angka VI background
             gsap.to(bgNumRef.current, {
                 y: -28,
                 duration: 5.5,
@@ -117,7 +108,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         return () => ctx.revert();
     }, [mounted]);
 
-    // ── Lottie entrance setelah data siap ────────────────────────────────────
     useEffect(() => {
         if (!lottieData || !LottieComp) return;
         gsap.fromTo(
@@ -127,18 +117,16 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         );
     }, [lottieData, LottieComp]);
 
-    // ── Loading counter — 8 detik ─────────────────────────────────────────────
     useEffect(() => {
         const interval = setInterval(() => {
             setPercent((p) => {
                 if (p >= 100) { clearInterval(interval); return 100; }
                 return p + 1;
             });
-        }, 80);
+        }, 70);
         return () => clearInterval(interval);
     }, []);
 
-    // ── Exit ketika 100% ──────────────────────────────────────────────────────
     useEffect(() => {
         if (percent < 100) return;
         const t = setTimeout(() => {
@@ -158,7 +146,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             ref={containerRef}
             className="fixed inset-0 z-50 bg-white overflow-hidden flex flex-col"
         >
-            {/* ── Dot pattern background ───────────────────────────────────────── */}
             <div
                 aria-hidden
                 className="pointer-events-none absolute inset-0 opacity-[0.35]"
@@ -168,19 +155,16 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 }}
             />
 
-            {/* ── Glow indigo ──────────────────────────────────────────────────── */}
             <div
                 aria-hidden
                 className="pointer-events-none absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-160 h-160 rounded-full bg-indigo-100/70 blur-3xl"
             />
 
-            {/* ── Glow emerald ─────────────────────────────────────────────────── */}
             <div
                 aria-hidden
                 className="pointer-events-none absolute bottom-12 right-24 w-60 h-60 rounded-full bg-emerald-100/50 blur-3xl"
             />
 
-            {/* ── Garis vertikal kiri ──────────────────────────────────────────── */}
             <div
                 ref={lineLeftRef}
                 aria-hidden
@@ -188,7 +172,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 style={{ background: "linear-gradient(to bottom, transparent, #c7d2fe, transparent)" }}
             />
 
-            {/* ── Garis vertikal kanan ─────────────────────────────────────────── */}
             <div
                 ref={lineRightRef}
                 aria-hidden
@@ -196,7 +179,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 style={{ background: "linear-gradient(to bottom, transparent, #c7d2fe, transparent)" }}
             />
 
-            {/* ── Dot row atas tengah ──────────────────────────────────────────── */}
             <div
                 ref={dotRowRef}
                 className="absolute top-7 left-1/2 -translate-x-1/2 flex items-center gap-2"
@@ -210,14 +192,11 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 ))}
             </div>
 
-            {/* ── Layout utama ─────────────────────────────────────────────────── */}
             <div className="relative z-10 flex-1 flex items-center px-12 md:px-20 lg:px-28 gap-12 max-w-7xl mx-auto w-full">
 
-                {/* ── KIRI: Text phases ─────────────────────────────────────────── */}
                 <div className="flex-1 max-w-xl min-h-55 flex flex-col justify-center">
                     <AnimatePresence mode="wait">
 
-                        {/* ── PHASE 0: "Selamat datang di VI-sion" ─────────────────── */}
                         {textPhase === 0 && (
                             <motion.div
                                 key="phase0"
@@ -236,7 +215,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                                     Selamat Datang di
                                 </motion.span>
 
-                                {/* "VI-sion" per huruf */}
                                 <div
                                     className="flex items-baseline overflow-hidden"
                                     style={{ perspective: "700px" }}
@@ -245,9 +223,8 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                                     <LetterSpan
                                         text="VI"
                                         className="font-black leading-none tracking-tighter text-gray-900 text-6xl md:text-8xl"
-                                    // style handled inline via fontFamily
                                     />
-                                    {/* - */}
+
                                     <motion.span
                                         className="font-black leading-none tracking-tighter text-indigo-400 text-5xl md:text-6xl mx-1"
                                         style={{ fontFamily: "Georgia, serif" }}
@@ -266,7 +243,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                             </motion.div>
                         )}
 
-                        {/* ── PHASE 1: "Sebelas langkah. Satu visi." ───────────────── */}
                         {textPhase === 1 && (
                             <motion.div
                                 key="phase1"
@@ -275,7 +251,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                                 transition={{ duration: 0.3 }}
                                 className="flex flex-col gap-4"
                             >
-                                {/* Baris 1 */}
                                 <p
                                     className="font-black leading-tight text-gray-900 text-3xl md:text-5xl"
                                     style={{ fontFamily: "Georgia, serif" }}
@@ -283,12 +258,10 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                                     <LetterSpan text="Sebelas langkah." />
                                 </p>
 
-                                {/* Baris 2 — dengan delay lebih */}
                                 <p
                                     className="font-black leading-tight text-indigo-500 italic text-3xl md:text-5xl"
                                     style={{ fontFamily: "Georgia, serif" }}
                                 >
-                                    {/* Delay baris 2 = setelah baris 1 selesai */}
                                     {"Satu visi.".split("").map((char, i) => (
                                         <motion.span
                                             key={i}
@@ -297,7 +270,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{
                                                 duration: 0.35,
-                                                // delay baris 1 habis ~= 17 huruf × 0.045 + buffer
                                                 delay: 0.85 + i * 0.055,
                                                 ease: [0.22, 1, 0.36, 1],
                                             }}
@@ -308,7 +280,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                                     ))}
                                 </p>
 
-                                {/* Divider muncul setelah semua huruf */}
                                 <motion.div
                                     className="h-px origin-left"
                                     style={{
@@ -335,9 +306,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                     </AnimatePresence>
                 </div>
 
-                {/* ── KANAN: Lottie ────────────────────────────────────────────── */}
                 <div ref={lottieWrapRef} className="relative shrink-0 opacity-0">
-                    {/* Ring tipis berputar */}
                     <motion.div
                         className="absolute inset-0 -m-8 rounded-full border border-indigo-200/50"
                         animate={{ rotate: 360 }}
@@ -355,7 +324,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 </div>
             </div>
 
-            {/* ── Loading counter — bottom, tanpa progress bar ─────────────────── */}
             <div className="relative z-10 px-12 md:px-20 lg:px-28 pb-8 pt-3 flex flex-col items-center">
                 <motion.div
                     initial={{ opacity: 0 }}

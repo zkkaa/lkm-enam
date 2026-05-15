@@ -96,43 +96,45 @@ export interface TeamMember {
   role: string;
   skills: string[];
   image: string;
+  isMentor?: boolean;
+  whatsapp?: string;
+  quote?: string;
 }
 
 export const teamData: TeamMember[] = [
-  {
+  // ── foto (paling depan) ────────────────────────────────────────────────
+{
     id: 1,
-    name: "Muhammad Fathir Maulana",
-    npm: "257006111022",
-    role: "",
-    skills: [],
-    image: "/foto/fathir.JPG",
+    name: "Bimantara",
+    npm: "247006111061",
+    role: "Mentor",
+    skills: ["Be Better Than Yesterday"],
+    image: "/foto/bima.jpg",
   },
+
   {
     id: 2,
-    name: "Farrel Adelard Vicksian",
-    npm: "257006111044",
-    role: "",
-    skills: [],
-    image: "/foto/farrel.JPG",
+    name: "Muhammad Gibran Fajar",
+    npm: "247006111181",
+    role: "Mentor",
+    skills: ["Be Your Own Hope"],
+    image: "/foto/gibran.jpg",
+    
   },
+
+  // ── Team Lead ─────────────────────────────────────────────────────────────
   {
     id: 3,
-    name: "Tisya Natasya Harviana",
-    npm: "257006111035",
-    role: "",
+    name: "Muhammad Fabian Syauqi Mazaya",
+    npm: "257006111197",
+    role: "Team Lead",
     skills: [],
-    image: "/foto/tisya.JPG",
+    image: "/foto/fabian.JPG",
   },
+
+  // ── Members (urut npm terkecil → terbesar) ────────────────────────────────
   {
     id: 4,
-    name: "Nazwa Khoerunnisa Herdiansyah",
-    npm: "257006111110",
-    role: "",
-    skills: [],
-    image: "/foto/nazwa.JPG",
-  },
-  {
-    id: 5,
     name: "Lutfi Fitriani",
     npm: "257006111011",
     role: "",
@@ -140,39 +142,7 @@ export const teamData: TeamMember[] = [
     image: "/foto/lutfi.JPG",
   },
   {
-    id: 6,
-    name: "Gemmy Dwirismariyan Hagi",
-    npm: "257006111074",
-    role: "",
-    skills: [],
-    image: "/foto/gemmy.JPG",
-  },
-  {
-    id: 7,
-    name: "Raffi Firmansyah",
-    npm: "257006111131",
-    role: "",
-    skills: [],
-    image: "/foto/raffi.JPG",
-  },
-  {
-    id: 8,
-    name: "Alia Zirlyanti Aripin",
-    npm: "257006111111",
-    role: "",
-    skills: [],
-    image: "/foto/alia.JPG",
-  },
-  {
-    id: 9,
-    name: "Hazmi Adzani Awanisi",
-    npm: "257006111130",
-    role: "",
-    skills: [],
-    image: "/foto/hazmi.JPG",
-  },
-  {
-    id: 10,
+    id: 5,
     name: "Muhammad Azka Fakhri Fairuz",
     npm: "257006111019",
     role: "",
@@ -180,36 +150,67 @@ export const teamData: TeamMember[] = [
     image: "/foto/azka.JPG",
   },
   {
-    id: 11,
-    name: "Muhammad Fabian Syauqi Mazaya",
-    npm: "257006111197",
-    role: "Team Lead",
+    id: 6,
+    name: "Muhammad Fathir Maulana",
+    npm: "257006111022",
+    role: "",
     skills: [],
-    image: "/foto/fabian.JPG",
-  },
-];
-
-export interface Mentor {
-  id: number;
-  name: string;
-  whatsapp: string;
-  image: string;
-  quote: string;
-}
- 
-export const mentorData: Mentor[] = [
-  {
-    id: 1,
-    name: "Muhammad Gibran Fajar",
-    whatsapp: "085603503821",
-    image: "/mentors/gibran.jpg",
-    quote: "",
+    image: "/foto/fathir.JPG",
   },
   {
-    id: 2,
-    name: "Bimantara",
-    whatsapp: "081312449168",
-    image: "/mentors/bimantara.jpg",
-    quote: "",
+    id: 7,
+    name: "Tisya Natasya Harviana",
+    npm: "257006111035",
+    role: "",
+    skills: [],
+    image: "/foto/tisya.JPG",
+  },
+  {
+    id: 8,
+    name: "Farrel Adelard Vicksian",
+    npm: "257006111044",
+    role: "",
+    skills: [],
+    image: "/foto/farrel.JPG",
+  },
+  {
+    id: 9,
+    name: "Gemmy Dwirismariyan Hagi",
+    npm: "257006111074",
+    role: "",
+    skills: [],
+    image: "/foto/gemmy.JPG",
+  },
+  {
+    id: 10,
+    name: "Alia Zirlyanti Aripin",
+    npm: "257006111111",
+    role: "",
+    skills: [],
+    image: "/foto/alia.JPG",
+  },
+  {
+    id: 11,
+    name: "Nazwa Khoerunnisa Herdiansyah",
+    npm: "257006111110",
+    role: "",
+    skills: [],
+    image: "/foto/nazwa.JPG",
+  },
+  {
+    id: 12,
+    name: "Hazmi Adzani Awanisi",
+    npm: "257006111130",
+    role: "",
+    skills: [],
+    image: "/foto/hazmi.JPG",
+  },
+  {
+    id: 13,
+    name: "Raffi Firmansyah",
+    npm: "257006111131",
+    role: "",
+    skills: [],
+    image: "/foto/raffi.JPG",
   },
 ];
