@@ -35,7 +35,7 @@ export default function Home() {
           <Quotes />
           <GroupIntro />
           <Team />
-            <Footer />
+          <Footer />
         </ScrollAnim>
       </main>
     </>

@@ -105,7 +105,7 @@ export const teamData: TeamMember[] = [
   // ── foto (paling depan) ────────────────────────────────────────────────
 {
     id: 1,
-    name: "Bimantara",
+    name: "A Bimantara Prakasa Jatnika",
     npm: "247006111061",
     role: "Mentor",
     skills: ["Be Better Than Yesterday"],
@@ -114,7 +114,7 @@ export const teamData: TeamMember[] = [
 
   {
     id: 2,
-    name: "Muhammad Gibran Fajar",
+    name: "A Muhammad Gibran Fajar",
     npm: "247006111181",
     role: "Mentor",
     skills: ["Be Your Own Hope"],

@@ -24,7 +24,7 @@ export function Footer() {
             >
               VI-sion
             </p>
-            <p className="text-sm text-gray-500 leading-relaxed">platform pembelajaran kalkulus interaktif berbasis teknologi yang tidak membuatmu bosan belajar.</p>
+            <p className="text-sm text-gray-500 leading-relaxed">Platform dokumentasi LKM Informatika Universitas Siliwangi, tempat kami merekam proses, bukan hanya hasil.</p>
           </div>
 
           {/* Nav links */}
