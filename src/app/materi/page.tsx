@@ -18,7 +18,7 @@ export default function MateriPage() {
 
         {/* Divider */}
         <div className="max-w-6xl mx-auto px-6 md:px-16">
-          <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+          <div className="h-px bg-linear-to-r from-transparent via-slate-200 to-transparent" />
         </div>
 
         <FilterBar />

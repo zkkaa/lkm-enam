@@ -189,3 +189,27 @@ export const teamData: TeamMember[] = [
   },
 ];
 
+export interface Mentor {
+  id: number;
+  name: string;
+  whatsapp: string;
+  image: string;
+  quote: string;
+}
+ 
+export const mentorData: Mentor[] = [
+  {
+    id: 1,
+    name: "Muhammad Gibran Fajar",
+    whatsapp: "085603503821",
+    image: "/mentors/gibran.jpg",
+    quote: "",
+  },
+  {
+    id: 2,
+    name: "Bimantara",
+    whatsapp: "081312449168",
+    image: "/mentors/bimantara.jpg",
+    quote: "",
+  },
+];
