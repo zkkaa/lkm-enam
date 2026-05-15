@@ -21,7 +21,6 @@ const groupImages = [
 const groupInfo = {
   number: "6",
   name: "Kelompok 6",
-  tagline: "Engineering we trust!!",
   description:
     "Kami adalah Kelompok 6 dari rangkaian Latihan Kepemimpinan Mahasiswa (LKM) Jurusan Informatika. Terbentuk dari berbagai latar belakang dan karakter yang berbeda, kami percaya bahwa keberagaman adalah kekuatan.",
   details: [
@@ -144,9 +143,6 @@ export default function GroupIntro() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
               {groupInfo.name}
             </h2>
-            <p className="text-indigo-400 font-medium mt-1 italic">
-              &quot;{groupInfo.tagline}&quot;
-            </p>
           </div>
 
           {/* Deskripsi */}

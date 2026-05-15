@@ -11,6 +11,7 @@ const Quotes = () => {
   const introLine3Ref = useRef<HTMLDivElement>(null);
   const nameContainerRef = useRef<HTMLDivElement>(null);
   const roleContainerRef = useRef<HTMLDivElement>(null);
+  const engineeringRef = useRef<HTMLDivElement>(null); // Scene 4
 
   // ── Register plugin sekali, sebelum paint pertama ──────────────────────────
   useLayoutEffect(() => {
@@ -30,8 +31,14 @@ const Quotes = () => {
         scale: 0.2,
         filter: "blur(15px)",
       });
+      gsap.set(engineeringRef.current, {
+        opacity: 0,
+        scale: 0.5,
+        filter: "blur(20px)",
+        letterSpacing: "0.5em",
+      });
 
-      const pinDuration = 7000;
+      const pinDuration = 10000; // diperpanjang untuk Scene 4
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -82,6 +89,26 @@ const Quotes = () => {
         roleContainerRef.current,
         { opacity: 0, y: -100, ease: "power2.in", duration: 1.5 },
         6.5
+      );
+
+      // --- SCENE 4: "In Engineering We Trust" ---
+      tl.to(
+        engineeringRef.current,
+        {
+          opacity: 1,
+          scale: 1,
+          filter: "blur(0px)",
+          letterSpacing: "0.08em",
+          ease: "expo.out",
+          duration: 2,
+        },
+        8
+      );
+      // Tetap tampil hingga akhir (tidak di-exit, biar berkesan)
+      tl.to(
+        engineeringRef.current,
+        { opacity: 0, scale: 1.15, filter: "blur(8px)", ease: "power2.in", duration: 1 },
+        9.5
       );
     }, containerRef);
 
@@ -193,11 +220,40 @@ const Quotes = () => {
           className="absolute inset-0 flex flex-col items-center justify-center font-[Raleway] z-40 px-8 md:px-24 gap-2"
         >
           <p className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-snug text-center">
-            Karena di sinilah kita belajar 
+            Karena di sinilah kita belajar
           </p>
           <p className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-snug text-center">
             bahwa bersama, kita lebih dari cukup.
           </p>
+        </div>
+
+        {/* ── SCENE 4 ── "In Engineering We Trust" ────────────────────────── */}
+        <div
+          ref={engineeringRef}
+          className="absolute inset-0 flex flex-col items-center justify-center font-[Raleway] z-40 px-6 gap-4"
+        >
+          {/* Garis dekoratif atas */}
+          <div className="w-24 h-px bg-black/30" />
+
+          <p
+            className="
+              text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
+              font-black uppercase tracking-widest leading-none text-center
+            "
+          >
+            In Engineering
+          </p>
+          <p
+            className="
+              text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
+              font-black uppercase tracking-widest leading-none text-center
+            "
+          >
+            We Trust
+          </p>
+
+          {/* Garis dekoratif bawah */}
+          <div className="w-24 h-px bg-black/30" />
         </div>
 
       </div>

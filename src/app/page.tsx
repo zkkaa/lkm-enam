@@ -11,7 +11,6 @@ import { Footer } from "@/components/ui/Footer";
 import GroupIntro from "@/components/home/GroupIntro";
 import AboutWeb from "@/components/home/AboutWeb";
 import TeaserMateri from "@/components/home/Teasermateri";
-import MentorSection from "@/components/home/Mentorsection";
 
 export default function Home() {
   const [splashDone, setSplashDone] = useState(false);
@@ -41,7 +40,6 @@ export default function Home() {
           <TeaserMateri />
           <Quotes />
           <GroupIntro />
-          <MentorSection />
           <Team />
           <Footer />
         </ScrollAnim>
