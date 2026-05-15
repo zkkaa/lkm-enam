@@ -221,13 +221,7 @@ export default function MateriDetailPage() {
     }, headerRef);
     return () => ctx.revert();
   }, [slug]);
-
-  const pertemuanColors: Record<number, { bg: string; text: string }> = {
-    1: { bg: "bg-violet-100", text: "text-violet-700" },
-    2: { bg: "bg-sky-100", text: "text-sky-700" },
-  };
-  const pColor = pertemuanColors[materi.pertemuan] ?? pertemuanColors[1];
-
+  
   // Sibling materi in same pertemuan
   const siblings = materiList.filter(
     (m) => m.pertemuan === materi.pertemuan && m.slug !== materi.slug
