@@ -11,8 +11,8 @@ gsap.registerPlugin(ScrollTrigger);
 // ── Data Gambar ────────────────────────────────────────────────────────────────
 const groupImages = [
   { id: 0, src: "/foto/lkm1.jpg", alt: "Foto kelompok 1" },
-  { id: 1, src: "/foto/lkm3.jpg", alt: "Foto kelompok 3" },
-  { id: 2, src: "/foto/lkm2.jpg", alt: "Foto kelompok 2" },
+  { id: 1, src: "/foto/lkm3.JPG", alt: "Foto kelompok 3" },
+  { id: 2, src: "/foto/lkm2.JPG", alt: "Foto kelompok 2" },
 ];
 
 // ── Data Kelompok ──────────────────────────────────────────────────────────────

@@ -76,7 +76,7 @@ export const teamData: TeamMember[] = [
     npm: "247006111061",
     role: "Mentor",
     skills: ["Be Better Than Yesterday"],
-    image: "/foto/bima.jpg",
+    image: "/foto/bima.JPG",
   },
 
   {
@@ -85,7 +85,7 @@ export const teamData: TeamMember[] = [
     npm: "247006111181",
     role: "Mentor",
     skills: ["Be Your Own Hope"],
-    image: "/foto/gibran.jpg",
+    image: "/foto/gibran.JPG",
     
   },
 
@@ -146,7 +146,7 @@ export const teamData: TeamMember[] = [
     npm: "257006111074",
     role: "",
     skills: [],
-    image: "/foto/gemmy.JPG",
+    image: "/foto/gemmy.jpg",
   },
   {
     id: 10,
@@ -170,7 +170,7 @@ export const teamData: TeamMember[] = [
     npm: "257006111130",
     role: "",
     skills: [],
-    image: "/foto/hazmi.JPG",
+    image: "/foto/hazmi.jpg",
   },
   {
     id: 13,
